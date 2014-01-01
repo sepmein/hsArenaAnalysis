@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h2>{{prologue}}</h2>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    统计胜率，早日成为6-5嘲讽
+  </p>
+
+</div>
+
+<div class="row">
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i> </span>
+    <input type="email" class="form-control" placeholder="email" ng-model="email">
+  </div>
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i> </span>
+    <input type="password" class="form-control" placeholder="密码" ng-model="password">
+  </div>
+  <p><a class="btn btn-lg btn-success" ng-click="createUser()">注册开始</a></p>
+  <p><span>已有账户？</span><a ng-href="#/login">登录</a></p>
+</div>
+
