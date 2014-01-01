@@ -8,6 +8,10 @@ angular.module('hsArenaAnalysisApp').config(function($routeProvider) {
 			templateUrl: 'views/main.html',
 			controller: 'MainCtrl'
 		})
+		.when('/user/:id', {
+			templateUrl: 'view/user.html',
+			authRequired: true;
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
