@@ -5,11 +5,12 @@ angular.module('hsArenaAnalysisApp')
 		function($scope, authentication) {
 
 			var prologues = [
-				'哈哈，快找个位子坐下吧',
 				'快在火炉旁找个位子坐下吧',
-				'那个啥那个啥',
+				'欢迎来到我的酒馆',
 				'小伙子们，看看谁来啦！',
-				'今晚累的够呛，但只要有客人来玩，我都欢迎'
+				'今晚累的够呛，但只要有客人来玩，我都欢迎',
+				'吼吼吼，很高兴能再见到你',
+				'哈，快找个位置坐下来'
 			];
 			$scope.prologue = prologues[Math.floor(Math.random() * prologues.length)];
 
