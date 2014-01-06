@@ -18,20 +18,22 @@
       <li><a href="#/login">登录</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-          <form method="post" accept-charset="UTF-8">
-            <input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
-            <input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
-            <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
-            <label class="string optional" for="user_remember_me"> Remember me</label>
-            <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
-          </form>            </div>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right ng-hide" ng-show="auth.user">
-        <li><a href="#">{{userEmail}}</a></li>
-        <li><a href="" ng-click="auth.$logout()">登出</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-
-  </nav>
+        <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i> </span>
+              <input type="email" class="form-control" placeholder="email" ng-model="user.email">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i> </span>
+              <input type="password" class="form-control" placeholder="密码" ng-model="user.password">
+            </div>
+          <button class="btn btn-primary" ng-click="login()">确定</button>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right ng-hide" ng-show="auth.user">
+      <li><a href="#">{{userEmail}}</a></li>
+      <li><a href="" ng-click="logout()">登出</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>

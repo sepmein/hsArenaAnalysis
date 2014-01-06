@@ -16,7 +16,7 @@ angular.module('hsArenaAnalysisApp')
       });
 
       $scope.login = function(){
-        authentication.login($scope.email, $scope.password, $scope.remenberMe);
+        authentication.login($scope.user.email, $scope.user.password, $scope.user.remenberMe);
       };
 
       $scope.logout = function(){
