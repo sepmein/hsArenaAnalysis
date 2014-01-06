@@ -9,7 +9,7 @@ angular.module('hsArenaAnalysisApp').config(function($routeProvider) {
 			controller: 'MainCtrl'
 		})
 		.when('/user/:id', {
-			templateUrl: 'view/user.html',
+			templateUrl: 'views/user.html',
 			authRequired: true
 		})
 		.otherwise({
@@ -24,7 +24,7 @@ angular.module('hsArenaAnalysisApp').config(function($routeProvider) {
 	function($firebaseAuth, FBURL, $rootScope) {
 		$rootScope.auth = $firebaseAuth(new Firebase(FBURL), {
 			simple: true,
-			path: '/login',
+			path: '/',
 			callback: function() {
 				//null for now
 			}

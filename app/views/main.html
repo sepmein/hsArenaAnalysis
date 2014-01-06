@@ -6,7 +6,7 @@
   </p>
 </div>
 
-<div class="row">
+<div class="row" id="signup" ng-hide="auth.user">
   <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i> </span>
     <input type="email" class="form-control" placeholder="email" ng-model="email">
@@ -18,25 +18,3 @@
   <p><a class="btn btn-lg btn-success" ng-click="createUser()">注册开始</a></p>
   <p><span>已有账户？</span><a ng-href="#/login">登录</a></p>
 </div>
-
-<button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->

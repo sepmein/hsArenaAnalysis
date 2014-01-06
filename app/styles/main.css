@@ -77,3 +77,31 @@ body {
     border-bottom: 0;
   }
 }
+
+/*defined by spencer*/
+header .dropdown-menu {
+  padding: 10px;
+  width: 250px;
+}
+
+header .dropdown-menu .input-group {
+  margin: 10px;
+}
+
+header .dropdown-menu button.btn {
+  margin: 10px auto 2px auto;
+  display: block;
+  width: 8em;
+}
+
+/*body*/
+body {
+  padding-top: 70px;
+}
+
+/*user view*/
+div.userView aside{
+  position:fixed;
+  left:70px;
+  top:70px;
+}

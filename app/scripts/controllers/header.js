@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('hsArenaAnalysisApp')
-  .controller('hsArenaAnalysisApp.controllers.header', ['$scope', '$rootScope', 'authentication',
-    function($scope, $rootScope, authentication) {
+  .controller('hsArenaAnalysisApp.controllers.header', ['$scope', '$rootScope', 'authentication', '$location', 
+    function($scope, $rootScope, authentication, $location) {
       // Setup drop down menu
       $('.dropdown-toggle').dropdown();
 
@@ -21,6 +21,7 @@ angular.module('hsArenaAnalysisApp')
 
       $scope.logout = function(){
         authentication.logout();
+        $location.path('/');
       };
 
     }
