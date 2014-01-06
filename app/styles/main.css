@@ -105,3 +105,44 @@ div.userView aside{
   left:70px;
   top:70px;
 }
+
+div.userView .hero{
+  width: 292px;
+  height: 98px;
+}
+
+div.userView .hero_qs{
+  background: url('../images/hero_head.png') no-repeat 0 0px;
+}
+
+div.userView .hero_dz{
+  background: url('../images/hero_head.png') no-repeat 0 -100px;
+}
+
+div.userView .hero_sm{
+  background: url('../images/hero_head.png') no-repeat 0 -200px;
+}
+
+div.userView .hero_lr{
+  background: url('../images/hero_head.png') no-repeat 0 -300px;
+}
+
+div.userView .hero_dly{
+  background: url('../images/hero_head.png') no-repeat 0 -400px;
+}
+
+div.userView .hero_fs{
+  background: url('../images/hero_head.png') no-repeat 0 -500px;
+}
+
+div.userView .hero_ss{
+  background: url('../images/hero_head.png') no-repeat 0 -600px;
+}
+
+div.userView .hero_zs{
+  background: url('../images/hero_head.png') no-repeat 0 -700px;
+}
+
+div.userView .hero_ms{
+  background: url('../images/hero_head.png') no-repeat 0 -800px;
+}

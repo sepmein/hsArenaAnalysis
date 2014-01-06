@@ -1,39 +1,46 @@
 <nav class="navbar navbar-default ng-scope noprint" role="navigation" ng-controller="hsArenaAnalysisApp.controllers.header">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">［炉石传说］竞技场胜率统计工具</a>
-  </div>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">［炉石传说］竞技场胜率统计工具</a>
+    </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li><a href="#/pco">PCO</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right" ng-hide="auth.user">
-      <li><a href="#/#signup">注册</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown">登录<strong class="caret"></strong></a>
-        <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i> </span>
-            <input type="email" class="form-control" placeholder="email" ng-model="user.email">
-          </div>
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i> </span>
-            <input type="password" class="form-control" placeholder="密码" ng-model="user.password">
-          </div>
-          <button class="btn btn-primary" ng-click="login()">确定</button>
-        </div>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right ng-hide" ng-show="auth.user">
-      <li><a href="#/user/{{auth.user.id}}">{{userEmail}}</a></li>
-      <li><a href="" ng-click="logout()">登出</a></li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="#/pco">PCO</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-hide="auth.user">
+            <li><a href="#/#signup">注册</a>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">登录 <i class="fa fa-spinner fa-spin" ng-show="loginStatus"></i><strong class="caret"></strong></a>
+                <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i> 
+                        </span>
+                        <input type="email" class="form-control" placeholder="email" ng-model="user.email" ng-keypress="login($event)" >
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i> 
+                        </span>
+                        <input type="password" class="form-control" placeholder="密码" ng-model="user.password" ng-keypress="login($event)">
+                    </div>
+                    <button class="btn btn-primary" ng-click="login()">确定</button>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right ng-hide" ng-show="auth.user">
+            <li><a href="#/user/{{auth.user.id}}">{{userEmail}}</a>
+            </li>
+            <li><a href="" ng-click="logout()">登出</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
 </nav>

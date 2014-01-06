@@ -1,63 +1,72 @@
 <div ng-controller="hsArenaAnalysisApp.controllers.user" class="userView">
-  <!-- sidebar -->
-  <aside>
-    <button class="btn btn-success" ng-click="switchView()"><i class="fa fa-plus"></i>新增记录</button>
-    <button class="btn" ng-click="switchView()"><i class="fa fa-dashboard"></i>统计面板</button>
-  </aside>
+    <!-- sidebar -->
+    <aside>
+        <button class="btn btn-success" ng-click="switchView()"><i class="fa fa-plus"></i>新增记录</button>
+        <button class="btn" ng-click="switchView()"><i class="fa fa-dashboard"></i>统计面板</button>
+    </aside>
 
-  <!-- main -->
-  <div>
-    <!-- adding log view -->
-    <div ng-show="showAdding">
-      <form class="form-horizontal ng-pristine ng-valid" role="form">
-        <div class="form-group">
-          <label for="proUsed" class="col-sm-2 control-label">选择职业</label>
-          <div class="col-sm-10">          
-            <input type="text" class="form-control" placeholder="你所使用的职业" ng-model="proUsed" id="proUsed">
-          </div>
+    <!-- main -->
+    <div>
+        <!-- adding log view -->
+        <div ng-show="showAdding">
+            <form class="form-horizontal ng-pristine ng-valid" role="form">
+                <div class="form-group">
+                    <label for="proUsed" class="col-sm-2 control-label">选择职业</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="你所使用的职业" ng-model="proUsed" id="proUsed">
+                        <div class="hero hero_qs"></div>
+                        <div class="hero hero_dz"></div>
+                        <div class="hero hero_sm"></div>
+                        <div class="hero hero_lr"></div>
+                        <div class="hero hero_dly"></div>
+                        <div class="hero hero_fs"></div>
+                        <div class="hero hero_ss"></div>
+                        <div class="hero hero_zs"></div>
+                        <div class="hero hero_ms"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="proBanned" class="col-sm-2 control-label">ban掉的职业</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="职业" ng-model="proBanned" id="proBanned">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="winningNum" class="col-sm-2 control-label">获胜场数</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="场数" ng-model="winningNum" id="winningNum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="losingNum" class="col-sm-2 control-label">失败场数</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="场数" ng-model="losingNum" id="losingNum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bestCards" class="col-sm-2 control-label">你手中最棒的卡牌</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="最棒的卡牌" ng-model="bestCards" id="bestCards">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="worstCards" class="col-sm-2 control-label">你手中最差的卡牌</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="最差的卡牌" ng-model="worstCards" id="worstCards">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bestCardsOp" class="col-sm-2 control-label">对手最好的卡牌</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="对手最棒的卡牌" ng-model="bestCardsOp" id="bestCardsOp">
+                    </div>
+                </div>
+                <button class="btn btn-primary" ng-click="submitLog()">提交</button>
+            </form>
         </div>
-        <div class="form-group">
-          <label for="proBanned" class="col-sm-2 control-label">ban掉的职业</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="职业" ng-model="proBanned" id="proBanned">
-          </div>
+        <!-- personal analysis view -->
+        <div ng-show="showDashBoard">
+            <p>统计面板</p>
         </div>
-        <div class="form-group">
-          <label for="winningNum" class="col-sm-2 control-label">获胜场数</label>
-          <div class="col-sm-10">          
-            <input type="text" class="form-control" placeholder="场数" ng-model="winningNum" id="winningNum">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="losingNum" class="col-sm-2 control-label">失败场数</label>
-          <div class="col-sm-10">          
-            <input type="text" class="form-control" placeholder="场数" ng-model="losingNum" id="losingNum">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="bestCards" class="col-sm-2 control-label">你手中最棒的卡牌</label>
-          <div class="col-sm-10">          
-            <input type="text" class="form-control" placeholder="最棒的卡牌" ng-model="bestCards"  id="bestCards">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="worstCards" class="col-sm-2 control-label">你手中最差的卡牌</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="最差的卡牌" ng-model="worstCards" id="worstCards">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="bestCardsOp" class="col-sm-2 control-label">对手最好的卡牌</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="对手最棒的卡牌" ng-model="bestCardsOp" id="bestCardsOp">
-          </div>
-        </div>
-        <button class="btn btn-primary" ng-click="submitLog()">提交</button>
-      </form>
     </div>
-    <!-- personal analysis view -->
-    <div ng-show="showDashBoard">
-      <p>统计面板</p>
-    </div>
-  </div>
 </div>
