@@ -22,12 +22,12 @@
 </head>
 <body ng-app="hsArenaAnalysisApp">
   <!--[if lt IE 7]>
-    <p class="browsehappy">您正在使用一个 <strong>远古时代</strong> 的浏览器. 请 <a href="http://browsehappy.com/">升级浏览器</a> 来增强您的互联网体验。</p>
+    <p class="browsehappy">您正在使用一个 <strong>远古时代</strong> 的浏览器。 请<a href="http://browsehappy.com/">升级浏览器</a> 来增强您的互联网体验。</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <header class="navbar navbar-fixed-top ng-scope" data-ng-include="'views/header.html'"></header>
-
+    <div data-ng-include="'views/message.html'"></div>
     <div class="container" ng-view=""></div>
 
     <footer class="container" data-ng-include="views/footer.html"></footer>
@@ -71,8 +71,10 @@
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/controllers/header.js"></script>
   <script src="scripts/controllers/user.js"></script>
+  <script src="scripts/controllers/controller.message.js"></script>
 
   <script src="scripts/services/authentication.js"></script>
+  <script src="scripts/services/message.js"></script>
 
   <!-- endbuild -->
 </body>

@@ -7,5 +7,6 @@ angular.module('hsArenaAnalysisApp', [
   'ngSanitize',
   'ngRoute',
   'hsArenaAnalysisApp.config',
-  'hsArenaAnalysisApp.services.authentication'
+  'hsArenaAnalysisApp.services.authentication',
+  'hsArenaAnalysisApp.services.message'
 ]);

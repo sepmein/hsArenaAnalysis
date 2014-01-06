@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('hsArenaAnalysisApp')
-  .controller('hsArenaAnalysisApp.controllers.header', ['$scope', '$rootScope', 'authentication', '$location', 
-    function($scope, $rootScope, authentication, $location) {
+  .controller('hsArenaAnalysisApp.controllers.header', ['$scope', '$rootScope', 'authentication', '$location', 'message',
+    function($scope, $rootScope, authentication, $location, message) {
       // Setup drop down menu
       $('.dropdown-toggle').dropdown();
 
@@ -15,11 +15,14 @@ angular.module('hsArenaAnalysisApp')
         $scope.userEmail = $rootScope.auth.user.email;
       });
 
-      $scope.login = function(){
+      $scope.$on('$firebaseAuth:error', function(event, error) {
+        message.danger(error.code);
+      });
+      $scope.login = function() {
         authentication.login($scope.user.email, $scope.user.password, $scope.user.remenberMe);
       };
 
-      $scope.logout = function(){
+      $scope.logout = function() {
         authentication.logout();
         $location.path('/');
       };
