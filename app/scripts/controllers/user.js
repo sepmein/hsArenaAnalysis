@@ -25,14 +25,14 @@ angular.module('hsArenaAnalysisApp')
           heroBanned: $scope.heroBanned,
           wins: $scope.wins,
           loses: $scope.loses,
-          bestCards: $scope.bestCards,
-          worstCards: $scope.worstCards,
-          bestCardsOp: $scope.bestCardsOp
+          bestCards: $scope.bestCard,
+          worstCards: $scope.worstCard,
+          bestCardsOp: $scope.bestCardOp
         };
         $scope.userLogs.$add($scope.log);
       };
 
-      $scope.heros = ['qs', 'dz', 'sm', 'lr', 'dly', 'fs', 'ss', 'zs', 'ms'];
+      $scope.heros = ['paladin', 'rogue', 'shaman', 'hunter', 'druid', 'mage', 'warlock', 'warrior', 'priest'];
 
       // hero select functions
       $scope.selectHeroUsed = function(heroIndex) {
@@ -57,13 +57,20 @@ angular.module('hsArenaAnalysisApp')
 
       //battle results functions
       $scope.wins = 0;
+      $scope.loses = 3;
+      $scope.losesMax = 3;
       $scope.onChangeWins = function() {
         if ($scope.wins <= 12 && $scope.wins >= 0) {
           if ($scope.wins <= 11) {
+            // 小于12胜，必然3败
             $scope.loses = 3;
+            $scope.losesMax = 3;
             $scope.disableLoses = true;
           } else {
             $scope.disableLoses = false;
+            // 等于12胜，不可能3败
+            $scope.loses = 2;
+            $scope.losesMax = 2;
           }
         }
       };
@@ -87,6 +94,38 @@ angular.module('hsArenaAnalysisApp')
           console.log($scope.bestCardModel);
         } else {
           $scope.isShownBestCard = false;
+        }
+      };
+
+      $scope.isShownWorstCard = false;
+      $scope.getWorstCard = function() {
+        $scope.worstCardModel = filterFilter($scope.cards, {
+          name: $scope.worstCardSearch
+        })[0];
+        var hasResult = $scope.worstCardModel.hasOwnProperty('imageUrl') && $scope.worstCardModel.hasOwnProperty('id');
+        var notNull = ($scope.worstCardSearch !== '');
+        if (hasResult && notNull) {
+          $scope.isShownWorstCard = true;
+          $scope.worstCard = $scope.worstCardModel.id;
+          console.log($scope.worstCardModel);
+        } else {
+          $scope.isShownWorstCard = false;
+        }
+      };
+
+      $scope.isShownBestCardop = false;
+      $scope.getBestCardop = function() {
+        $scope.bestCardopModel = filterFilter($scope.cards, {
+          name: $scope.bestCardopSearch
+        })[0];
+        var hasResult = $scope.bestCardopModel.hasOwnProperty('imageUrl') && $scope.bestCardopModel.hasOwnProperty('id');
+        var notNull = ($scope.bestCardopSearch !== '');
+        if (hasResult && notNull) {
+          $scope.isShownBestCardop = true;
+          $scope.bestCardop = $scope.bestCardopModel.id;
+          console.log($scope.bestCardopModel);
+        } else {
+          $scope.isShownBestCardop = false;
         }
       };
     }

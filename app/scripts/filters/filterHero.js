@@ -4,23 +4,23 @@ angular.module('hsArenaAnalysisApp')
 	.filter('hero', function() {
 		return function(heroString) {
 			switch (heroString) {
-				case 'qs':
+				case 'paladin':
 					return '圣骑士';
-				case 'dz':
+				case 'rogue':
 					return '潜行者';
-				case 'sm':
+				case 'shaman':
 					return '萨满';
-				case 'lr':
+				case 'hunter':
 					return '猎人';
-				case 'dly':
+				case 'druid':
 					return '德鲁伊';
-				case 'fs':
+				case 'mage':
 					return '法师';
-				case 'ss':
+				case 'warlock':
 					return '术士';
-				case 'zs':
+				case 'warrior':
 					return '战士';
-				case 'ms':
+				case 'priest':
 					return '牧师';
 			}
 		};
