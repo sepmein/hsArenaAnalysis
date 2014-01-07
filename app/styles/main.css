@@ -32,9 +32,9 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .container {
-    max-width: 730px;
+    max-width: 970px;
   }
 }
 .container-narrow > hr {
@@ -102,15 +102,22 @@ body {
 /*user view*/
 div.userView aside{
   position:fixed;
-  left:70px;
+  left:20px;
   top:70px;
+  width: 120px;
+}
+
+div.userView aside button{
+  margin: 10px;
 }
 
 div.userView .hero{
-  width: 292px;
   height: 98px;
 }
 
+div.userView .hero:hover{
+  cursor: pointer;
+}
 div.userView .hero_qs{
   background: url('../images/hero_head.png') no-repeat 0 0px;
 }

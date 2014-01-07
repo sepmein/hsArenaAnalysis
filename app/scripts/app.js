@@ -8,5 +8,6 @@ angular.module('hsArenaAnalysisApp', [
   'ngRoute',
   'hsArenaAnalysisApp.config',
   'hsArenaAnalysisApp.services.authentication',
-  'hsArenaAnalysisApp.services.message'
+  'hsArenaAnalysisApp.services.message',
+  'hsArenaAnalysisApp.services.cards'
 ]);
