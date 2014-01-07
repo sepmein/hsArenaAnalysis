@@ -27,7 +27,8 @@ angular.module('hsArenaAnalysisApp')
           loses: $scope.loses,
           bestCards: $scope.bestCard,
           worstCards: $scope.worstCard,
-          bestCardsOp: $scope.bestCardOp
+          bestCardsOp: $scope.bestCardOp,
+          date: Date.now()
         };
         $scope.userLogs.$add($scope.log);
       };

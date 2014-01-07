@@ -118,38 +118,38 @@ div.userView .hero{
 div.userView .hero:hover{
   cursor: pointer;
 }
-div.userView .hero_qs{
+div.userView .hero_paladin{
   background: url('../images/hero_head.png') no-repeat 0 0px;
 }
 
-div.userView .hero_dz{
+div.userView .hero_rogue{
   background: url('../images/hero_head.png') no-repeat 0 -100px;
 }
 
-div.userView .hero_sm{
+div.userView .hero_shaman{
   background: url('../images/hero_head.png') no-repeat 0 -200px;
 }
 
-div.userView .hero_lr{
+div.userView .hero_hunter{
   background: url('../images/hero_head.png') no-repeat 0 -300px;
 }
 
-div.userView .hero_dly{
+div.userView .hero_druid{
   background: url('../images/hero_head.png') no-repeat 0 -400px;
 }
 
-div.userView .hero_fs{
+div.userView .hero_mage{
   background: url('../images/hero_head.png') no-repeat 0 -500px;
 }
 
-div.userView .hero_ss{
+div.userView .hero_warlock{
   background: url('../images/hero_head.png') no-repeat 0 -600px;
 }
 
-div.userView .hero_zs{
+div.userView .hero_warrior{
   background: url('../images/hero_head.png') no-repeat 0 -700px;
 }
 
-div.userView .hero_ms{
+div.userView .hero_priest{
   background: url('../images/hero_head.png') no-repeat 0 -800px;
 }
