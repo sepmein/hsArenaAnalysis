@@ -3,20 +3,25 @@
 angular.module('hsArenaAnalysisApp')
   .controller('hsArenaAnalysisApp.controllers.user', ['$scope', '$firebase', 'FBURL', '$rootScope', 'cards', 'filterFilter',
     function($scope, $firebase, FBURL, $rootScope, cards, filterFilter) {
-      // show adding view as default
+
+      /** configuration
+       * show adding view as default
+       */
+
       $scope.showAdding = 1;
       $scope.showDashBoard = 0;
-
-      // TODO: test
-      $scope.uid = $rootScope.auth.user.id;
 
       $scope.switchView = function() {
         $scope.showAdding = !$scope.showAdding;
         $scope.showDashBoard = !$scope.showDashBoard;
       };
 
-      $scope.userLogs = $firebase(new Firebase(FBURL + '/logs/' + $scope.uid));
 
+
+      /**
+       * submit function
+       */
+      $scope.uid = $rootScope.auth.user.id;
       $scope.submitLog = function() {
         // construct the log object to be pushed
         $scope.log = {
@@ -33,9 +38,13 @@ angular.module('hsArenaAnalysisApp')
         $scope.userLogs.$add($scope.log);
       };
 
+
+      /**
+       * hero select functions
+       */
+
       $scope.heros = ['paladin', 'rogue', 'shaman', 'hunter', 'druid', 'mage', 'warlock', 'warrior', 'priest'];
 
-      // hero select functions
       $scope.selectHeroUsed = function(heroIndex) {
         $scope.heroUsed = $scope.heros[heroIndex];
       };
@@ -44,8 +53,11 @@ angular.module('hsArenaAnalysisApp')
         $scope.heroBanned = [];
       };
 
-      // hero banned functions
+      /**
+       * hero banned functions
+       */
       $scope.heroBanned = [];
+
       $scope.selectHeroBanned = function(heroIndex) {
         var check = $scope.heroBanned.length <= 2 && $scope.heroBanned[0] !== $scope.heros[heroIndex] && $scope.heroBanned[1] !== $scope.heros[heroIndex] && $scope.heros[heroIndex] !== $scope.heroUsed;
         if (check) {
@@ -56,7 +68,10 @@ angular.module('hsArenaAnalysisApp')
         $scope.heroBanned = [];
       };
 
-      //battle results functions
+
+      /**
+       * battle results function
+       */
       $scope.wins = 0;
       $scope.loses = 3;
       $scope.losesMax = 3;
@@ -64,6 +79,7 @@ angular.module('hsArenaAnalysisApp')
         if ($scope.wins <= 12 && $scope.wins >= 0) {
           if ($scope.wins <= 11) {
             // 小于12胜，必然3败
+            // bug: input被diable之后，上面的败场数无法正确显示
             $scope.loses = 3;
             $scope.losesMax = 3;
             $scope.disableLoses = true;
@@ -79,7 +95,11 @@ angular.module('hsArenaAnalysisApp')
       $scope.loses = 3;
       $scope.disableLoses = false;
 
-      // dealing with cards
+
+      /**
+       * card search functions
+       * TODO: make a directive for cards
+       */
       $scope.cards = cards.allCards();
 
       $scope.isShownBestCard = false;
@@ -129,5 +149,58 @@ angular.module('hsArenaAnalysisApp')
           $scope.isShownBestCardop = false;
         }
       };
+
+
+
+      /**
+       * sync with firebase
+       */
+      $scope.userLogs = $firebase(new Firebase(FBURL + '/logs/' + $scope.uid));
+      $scope.userLogsIndex = function() {
+        return $scope.userLogs.$getIndex();
+      };
+      $scope.userLogsValue = function() {
+        var values = [];
+        for (var i = $scope.userLogsIndex().length - 1; i >= 0; i--) {
+          values.push($scope.userLogs[$scope.userLogsIndex()[i]]);
+        }
+        return values;
+      };
+
+
+      /**
+       * statistic functions
+       */
+
+      //无数据提醒
+      $scope.noDataWarning = 0;
+
+      $scope.userLogs.$on('loaded', function() {
+        if ($scope.userLogs.$getIndex() === 0) {
+          $scope.noDataWarning = 1;
+        } else {}
+      });
+
+      $scope.totalWins = function() {
+        if ($scope.userLogsValue()[0]) {
+          // firebase data has been loaded
+          var total = 0;
+          for (var i = $scope.userLogsValue().length - 1; i >= 0; i--) {
+            total += $scope.userLogsValue()[i].wins;
+          }
+          return total;
+        } else {
+          return 'loading';
+        }
+      };
+
+      $scope.averageWins = function() {
+        if ($scope.userLogsValue()[0]) {
+          return $scope.totalWins() / $scope.userLogsIndex().length;
+        } else {
+          return 'loading';
+        }
+      };
+
     }
   ]);
