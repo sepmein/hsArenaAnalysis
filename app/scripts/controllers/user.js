@@ -170,6 +170,7 @@ angular.module('hsArenaAnalysisApp')
 
       /**
        * statistic functions
+       * TODO: 胜场曲线图，职业使用次数统计，被ban次数统计，职业偏好，职业胜率图，奖励分析
        */
 
       //无数据提醒

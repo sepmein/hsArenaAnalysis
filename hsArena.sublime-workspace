@@ -4,8 +4,52 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"userLogsValue"
+			],
+			[
+				"view",
+				"viewSeletion"
+			],
+			[
+				"add",
+				"addingLog"
+			],
+			[
+				"addin",
+				"addingLog"
+			],
+			[
+				"total",
+				"totalWins"
+			],
+			[
+				"use",
+				"userLogs"
+			],
+			[
+				"best",
+				"bestCardSearch"
+			],
+			[
+				"be",
+				"bestCardModel"
+			],
+			[
+				"bes",
+				"bestCardModel"
+			],
+			[
+				"her",
+				"heroIndex"
+			],
+			[
+				"hero",
+				"heroBanned"
+			],
+			[
 				"he",
-				"heroUsed"
+				"heroBanned"
 			],
 			[
 				"wid",
@@ -22,10 +66,6 @@
 			[
 				"padd",
 				"padding-top"
-			],
-			[
-				"be",
-				"bestCardsOp"
 			],
 			[
 				"pro",
@@ -123,7 +163,7 @@
 			"file": "app/views/user.html",
 			"settings":
 			{
-				"buffer_size": 2923,
+				"buffer_size": 3817,
 				"line_ending": "Unix"
 			}
 		},
@@ -131,7 +171,15 @@
 			"file": "app/scripts/controllers/user.js",
 			"settings":
 			{
-				"buffer_size": 1253,
+				"buffer_size": 6059,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".jshintrc",
+			"settings":
+			{
+				"buffer_size": 447,
 				"line_ending": "Unix"
 			}
 		},
@@ -139,7 +187,15 @@
 			"file": "app/scripts/filters/filterHero.js",
 			"settings":
 			{
-				"buffer_size": 454,
+				"buffer_size": 488,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/services/serviceCards.js",
+			"settings":
+			{
+				"buffer_size": 192814,
 				"line_ending": "Unix"
 			}
 		}
@@ -147,9 +203,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 327.0,
+		"height": 147.0,
 		"selected_items":
 		[
+			[
+				"ss java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ss javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"config",
+				"Code Folding: Fold Tag Attributes"
+			],
 			[
 				"reinde",
 				"Indentation: Reindent Lines"
@@ -267,7 +335,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 436.0
+		"width": 437.0
 	},
 	"console":
 	{
@@ -288,14 +356,33 @@
 	},
 	"file_history":
 	[
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/controllers/header.js",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/controllers/user.js",
+		"/Users/Spencer/dev/spencer/Lab/d3/Gruntfile.js",
+		"/Users/Spencer/.bash_profile",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/.git/COMMIT_EDITMSG",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/styles/main.css",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/views/main.html",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/controllers/main.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/font-awesome/src/assets/less/site/fontawesome-icon-list.less",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/views/footer.html",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/controllers/header.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-google-cdn/node_modules/bower/templates/help-register.mustache",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/font-awesome/src/3.2.1/assets/less/bootstrap-2.3.2/hero-unit.less",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/fonts/glyphicons-halflings-regular.woff",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/MozillaRootCertificates.as",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/.jshintrc",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/app.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/config.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/index.html",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/node_modules/bin-wrapper/node_modules/mout/lang/isNull.js",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/controllers/main.js",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/.git/COMMIT_EDITMSG",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/font-awesome/src/_includes/ads/carbon-dark-vertical.html",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/bootstrap/js/carousel.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/bootstrap/less/component-animations.less",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/services/serviceCards.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/karma/lib/server.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-google-cdn/node_modules/bower/templates/search-empty.mustache",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/jshint-stylish/stylish.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/filters/filterHero.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/controllers/user.js",
+		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/views/main.html",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/.tmp/styles/main.css",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/views/header.html",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/services/message.js",
@@ -305,11 +392,9 @@
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/views/user.html",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/test/spec/controllers/main.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt/CONTRIBUTING.md",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/config.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt/node_modules/hooker/test/hooker_test.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-contrib-htmlmin/tasks/htmlmin.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/es5-shim/tests/lib/jasmine-html.js",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/scripts/app.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-svgmin/node_modules/svgo/plugins/cleanupNumericValues.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-contrib-cssmin/tasks/cssmin.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/coffee-script.js",
@@ -318,7 +403,6 @@
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/bootstrap/DOCS-LICENSE",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-google-cdn/node_modules/bower/test/assets/package-ignorables/config/.jshintrc",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/karma.conf.js",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/.jshintrc",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-contrib-jshint/node_modules/.bin/jshint",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/angular-scenario/jstd-scenario-adapter.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/jquery/jquery.js",
@@ -347,12 +431,10 @@
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/karma/node_modules/log4js/node_modules/readable-stream/test/simple/test-stream2-read-sync-stack.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt/node_modules/findup-sync/test/findup-sync_test.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-karma/.idea/scopes/scope_settings.xml",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/jshint-stylish/stylish.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-contrib-watch/test/fixtures/multiTargets/lib/interrupt.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-contrib-jshint/test/fixtures/lint.txt",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/node_modules/grunt-google-cdn/node_modules/bower/templates/link.mustache",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/LICENSE",
-		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/views/footer.html",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/Gruntfile.js",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/app/bower_components/angularfire/.bower.json",
 		"/Users/Spencer/dev/spencer/hsArenaAnalysis/bower.json",
@@ -384,7 +466,6 @@
 		"/Users/Spencer/dev/spencer/pest/Gruntfile.js",
 		"/Users/Spencer/dev/spencer/pest/goProduction.sh",
 		"/Users/Spencer/dev/spencer/pest/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/node_modules/bin-wrapper/node_modules/mout/lang/isNull.js",
-		"/Users/Spencer/.bash_profile",
 		"/Users/Spencer/dev/spencer/pest/app/views/header.html",
 		"/Users/Spencer/dev/spencer/pest/app/scripts/controllers/header.js",
 		"/Users/Spencer/dev/spencer/pest/app/views/pco/list.html",
@@ -402,24 +483,11 @@
 		"/Users/Spencer/dev/spencer/pest/app/scripts/services/authentication.js",
 		"/Users/Spencer/dev/spencer/pest/app/scripts/controllers/main.js",
 		"/Users/Spencer/dev/spencer/pest/app/scripts/controllers/pco/view.js",
-		"/Users/Spencer/dev/spencer/pest/app/views/pco/view.html",
-		"/Users/Spencer/dev/spencer/pest/app/views/pco/new.html",
-		"/Users/Spencer/dev/spencer/pest/.bowerrc",
-		"/Users/Spencer/dev/spencer/pest/bower.json",
-		"/Users/Spencer/dev/spencer/pest/app/scripts/filters/objectSearch.js",
-		"/Users/Spencer/dev/spencer/pest/app/views/main.html",
-		"/Users/Spencer/Google 云端硬盘/dev/learning/thinkster/app/js/config.js",
-		"/Users/Spencer/Google 云端硬盘/dev/learning/thinkster/app/js/controllers/nflcontroller.js",
-		"/Users/Spencer/Google 云端硬盘/dev/learning/thinkster/app/js/app.js",
-		"/Users/Spencer/Google 云端硬盘/dev/learning/thinkster/app/js/services/loginservice.js",
-		"/Users/Spencer/Google 云端硬盘/dev/learning/thinkster/app/js/controllers/signincontroller.js",
-		"/Users/Spencer/Google 云端硬盘/dev/learning/thinkster/app/index.html",
-		"/Users/Spencer/dev/spencer/pco-2/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/node_modules/bin-wrapper/node_modules/mout/lang/isNull.js",
-		"/Users/Spencer/Google 云端硬盘/dev/learning/thinkster/bower.json"
+		"/Users/Spencer/dev/spencer/pest/app/views/pco/view.html"
 	],
 	"find":
 	{
-		"height": 44.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -434,6 +502,51 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"switch",
+			"viewSelection",
+			"showAdding",
+			"尘魔",
+			"shaman",
+			"hero_lr",
+			"lr",
+			"dz",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"bestCard",
+			"BestCard",
+			"best",
+			"Best",
+			"best",
+			"Best",
+			"best",
+			"Best",
+			"best",
+			"Best",
+			"best",
+			"Best",
+			"best",
+			"imageUrl",
+			"false",
+			"'",
+			"\"",
+			"getCardsData",
+			"\"",
+			"name",
+			"message",
+			"selectHeroUsed",
 			"					break;\n",
 			":",
 			": ",
@@ -516,41 +629,7 @@
 			"Loading",
 			"view",
 			"cn",
-			"address",
-			"_id",
-			"new",
-			"('')",
-			"myModal",
-			"primary",
-			"value",
-			"grade",
-			"en.",
-			"en",
-			"cnCompany",
-			"cn.",
-			"pco.",
-			"pco",
-			"cn",
-			"artificialPerson",
-			"validityDate",
-			"FireRefs.pcoList()",
-			"static",
-			"10",
-			"<input",
-			"/p",
-			"p ",
-			"mLoginStateChange",
-			"callback",
-			"FirebaseSimpleLogin",
-			"angularFireAuth",
-			"sass-",
-			"route",
-			"leagues",
-			"list",
-			"routeparams",
-			"\n",
-			"Modern",
-			"getCoords"
+			"address"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -558,6 +637,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
 			"col-md"
 		],
 		"reverse": false,
@@ -578,15 +658,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2923,
+						"buffer_size": 3817,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								538,
-								543
+								2406,
+								2417
 							]
 						],
 						"settings":
@@ -744,7 +824,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 97.0,
+						"translation.y": 873.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -762,15 +842,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1253,
+						"buffer_size": 6059,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1082,
-								1129
+								5262,
+								5262
 							]
 						],
 						"settings":
@@ -778,10 +858,14 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -790,34 +874,30 @@
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close"
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close"
 							],
 							"codeintel": true,
 							"codeintel_config":
@@ -928,7 +1008,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2189.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -936,19 +1016,93 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/scripts/filters/filterHero.js",
+					"file": ".jshintrc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 454,
+						"buffer_size": 447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								431,
-								431
+								447,
+								447
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/scripts/filters/filterHero.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								453
 							]
 						],
 						"settings":
@@ -1108,7 +1262,184 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/scripts/services/serviceCards.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 192814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1546,
+								1549
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1116,7 +1447,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 44.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -1159,7 +1490,7 @@
 	"project": "hsArena.sublime-project",
 	"replace":
 	{
-		"height": 82.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1168,20 +1499,44 @@
 		"selected_items":
 		[
 			[
-				"user.js",
-				"app/scripts/controllers/user.js"
+				"main.css",
+				"app/styles/main.css"
+			],
+			[
+				"filter",
+				"app/scripts/filters/filterHero.js"
+			],
+			[
+				"app.js",
+				"app/scripts/app.js"
 			],
 			[
 				"inde",
 				"app/index.html"
 			],
 			[
-				"main.html",
-				"app/views/main.html"
+				"cards",
+				"app/scripts/services/serviceCards.js"
 			],
 			[
-				"main.css",
-				"app/styles/main.css"
+				"servicecards",
+				"app/scripts/services/serviceCards.js"
+			],
+			[
+				"config.js",
+				"app/scripts/config.js"
+			],
+			[
+				"index.html",
+				"app/index.html"
+			],
+			[
+				"user.js",
+				"app/scripts/controllers/user.js"
+			],
+			[
+				"main.html",
+				"app/views/main.html"
 			],
 			[
 				"header",
@@ -1202,10 +1557,6 @@
 			[
 				"controler",
 				"app/scripts/controllers/controller.message.js"
-			],
-			[
-				"app.js",
-				"app/scripts/app.js"
 			],
 			[
 				"header.js",
@@ -1306,14 +1657,6 @@
 			[
 				"app",
 				"app/scripts/app.js"
-			],
-			[
-				"config.js",
-				"app/scripts/config.js"
-			],
-			[
-				"index.html",
-				"app/index.html"
 			],
 			[
 				"auth.js",
@@ -1421,7 +1764,7 @@
 	"settings":
 	{
 	},
-	"show_minimap": false,
+	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
