@@ -67,14 +67,17 @@
             <p>统计面板</p>
             <p ng-show="noDataWarning">你还没有提交任何数据，试着添加以下吧～</p>
             <div ng-hide="noDataWarning">
-            <section class="totalWins">
-                <h3>总胜场：</h3>
-                <p>{{totalWins()}}</p>
-            </section>
-                        <section class="averageWins">
-                <h3>平均胜场：</h3>
-                <p>{{averageWins()}}</p>
-            </section>
+                <section class="totalWins">
+                    <h3>总胜场：</h3>
+                    <p>{{totalWins()}}</p>
+                </section>
+                <section class="averageWins">
+                    <h3>平均胜场：</h3>
+                    <p>{{averageWins()}}</p>
+                </section>
+                <section id="chart" class="col-md-12">
+                    <svg></svg>
+                </section>
             </div>
         </div>
     </div>

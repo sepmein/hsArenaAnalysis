@@ -176,10 +176,49 @@ angular.module('hsArenaAnalysisApp')
       //无数据提醒
       $scope.noDataWarning = 0;
 
-      $scope.userLogs.$on('loaded', function() {
-        if ($scope.userLogs.$getIndex() === 0) {
-          $scope.noDataWarning = 1;
-        } else {}
+      $scope.statistic = {
+        wins: function(d) {
+          var winsRate = [];
+          for (var k in d) {
+            var v = d[k];
+            winsRate.push({
+              x: v.date,
+              y: Math.floor(v.wins / (v.wins + 3) * 100)
+            });
+          }
+          return [{
+            values: winsRate,
+            key: '胜率',
+            color: '#ff9fe0'
+          }];
+        }
+      };
+
+      $scope.userLogs.$on('loaded', function(d) {
+        console.log($scope.statistic.wins(d));
+        var winsValue = $scope.statistic.wins(d);
+        // drawing wins by nvd3
+        nv.addGraph(function() {
+          var chart = nv.models.lineChart().forceY([0, 100]);
+          chart.xAxis
+            .axisLabel('Time')
+            .tickFormat(function(d) {
+              return d3.time.format('%b %d')(new Date(d));
+            });
+
+          chart.yAxis
+            .axisLabel('胜率 (%)');
+
+          d3.select('#chart svg')
+            .style('height', 200).style('width', 400)
+            .datum(winsValue)
+            .transition().duration(500)
+            .call(chart);
+
+          nv.utils.windowResize(chart.update);
+
+          return chart;
+        });
       });
 
       $scope.totalWins = function() {
@@ -202,6 +241,7 @@ angular.module('hsArenaAnalysisApp')
           return 'loading';
         }
       };
+
 
     }
   ]);
