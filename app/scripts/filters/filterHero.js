@@ -22,6 +22,8 @@ angular.module('hsArenaAnalysisApp')
 					return '战士';
 				case 'priest':
 					return '牧师';
+				case 'neutral':
+					return '中立';
 			}
 		};
 	});

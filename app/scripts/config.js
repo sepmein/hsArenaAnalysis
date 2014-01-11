@@ -12,6 +12,9 @@ angular.module('hsArenaAnalysisApp').config(function($routeProvider) {
 			templateUrl: 'views/user.html',
 			authRequired: true
 		})
+		.when('/cards', {
+			templateUrl: 'views/cards.html'
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
