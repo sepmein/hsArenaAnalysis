@@ -14,12 +14,12 @@
         <tbody>
             <tr ng-repeat="card in cards">
                 <td>{{card.name}}</td>
-                <td>{{card.cardClass | hero}}</td>
+                <td>{{card.cardClass | klass}}</td>
                 <td>{{card.cost}}</td>
-                <td>{{card.cardSet}}</td>
-                <td>{{card.cardType}}</td>
-                <td>{{card.cardRarity}}</td>
-                <td>{{card.cardEffect}}</td>
+                <td>{{card.cardSet | set}}</td>
+                <td>{{card.cardType | type}}</td>
+                <td>{{card.cardRarity | rarity}}</td>
+                <td>{{card.cardEffect | effect}}</td>
             </tr>
         </tbody>
     </table>

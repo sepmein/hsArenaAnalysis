@@ -75,11 +75,12 @@ angular.module('hsArenaAnalysisApp')
       $scope.wins = 0;
       $scope.loses = 3;
       $scope.losesMax = 3;
+      $scope.disableLoses = false;
       $scope.onChangeWins = function() {
         if ($scope.wins <= 12 && $scope.wins >= 0) {
           if ($scope.wins <= 11) {
             // 小于12胜，必然3败
-            // bug: input被diable之后，上面的败场数无法正确显示
+            // BUG: input被diable之后，上面的败场数无法正确显示
             $scope.loses = 3;
             $scope.losesMax = 3;
             $scope.disableLoses = true;
@@ -92,19 +93,30 @@ angular.module('hsArenaAnalysisApp')
         }
       };
 
-      $scope.loses = 3;
-      $scope.disableLoses = false;
-
 
       /**
        * card search functions
        * TODO: make a directive for cards
        */
-      $scope.cards = cards.allCards();
+      $scope.cards = {
+        data: [],
+        image: {}
+      };
+      cards.data(function(val) {
+        $scope.$emit('cardsLoaded');
+        for (var k in val) {
+          $scope.cards.data.push(val[k]);
+        }
+        console.log($scope.cards.data);
+      });
+      cards.image(function(val) {
+        $scope.cards.image = val;
+        $scope.$emit('imageUrlLoaded');
+      });
 
       $scope.isShownBestCard = false;
       $scope.getBestCard = function() {
-        $scope.bestCardModel = filterFilter($scope.cards, {
+        $scope.bestCardModel = filterFilter($scope.cards.data, {
           name: $scope.bestCardSearch
         })[0];
         var hasResult = $scope.bestCardModel.hasOwnProperty('imageUrl') && $scope.bestCardModel.hasOwnProperty('id');
@@ -112,7 +124,7 @@ angular.module('hsArenaAnalysisApp')
         if (hasResult && notNull) {
           $scope.isShownBestCard = true;
           $scope.bestCard = $scope.bestCardModel.id;
-          console.log($scope.bestCardModel);
+          // console.log($scope.bestCardModel);
         } else {
           $scope.isShownBestCard = false;
         }
@@ -120,7 +132,7 @@ angular.module('hsArenaAnalysisApp')
 
       $scope.isShownWorstCard = false;
       $scope.getWorstCard = function() {
-        $scope.worstCardModel = filterFilter($scope.cards, {
+        $scope.worstCardModel = filterFilter($scope.cards.data, {
           name: $scope.worstCardSearch
         })[0];
         var hasResult = $scope.worstCardModel.hasOwnProperty('imageUrl') && $scope.worstCardModel.hasOwnProperty('id');
@@ -128,7 +140,7 @@ angular.module('hsArenaAnalysisApp')
         if (hasResult && notNull) {
           $scope.isShownWorstCard = true;
           $scope.worstCard = $scope.worstCardModel.id;
-          console.log($scope.worstCardModel);
+          // console.log($scope.worstCardModel);
         } else {
           $scope.isShownWorstCard = false;
         }
@@ -136,7 +148,7 @@ angular.module('hsArenaAnalysisApp')
 
       $scope.isShownBestCardop = false;
       $scope.getBestCardop = function() {
-        $scope.bestCardopModel = filterFilter($scope.cards, {
+        $scope.bestCardopModel = filterFilter($scope.cards.data, {
           name: $scope.bestCardopSearch
         })[0];
         var hasResult = $scope.bestCardopModel.hasOwnProperty('imageUrl') && $scope.bestCardopModel.hasOwnProperty('id');
@@ -144,7 +156,7 @@ angular.module('hsArenaAnalysisApp')
         if (hasResult && notNull) {
           $scope.isShownBestCardop = true;
           $scope.bestCardop = $scope.bestCardopModel.id;
-          console.log($scope.bestCardopModel);
+          // console.log($scope.bestCardopModel);
         } else {
           $scope.isShownBestCardop = false;
         }
@@ -156,13 +168,11 @@ angular.module('hsArenaAnalysisApp')
        * sync with firebase
        */
       $scope.userLogs = $firebase(new Firebase(FBURL + '/logs/' + $scope.uid));
-      $scope.userLogsIndex = function() {
-        return $scope.userLogs.$getIndex();
-      };
+      $scope.userLogsIndex = $scope.userLogs.$getIndex();
       $scope.userLogsValue = function() {
         var values = [];
-        for (var i = $scope.userLogsIndex().length - 1; i >= 0; i--) {
-          values.push($scope.userLogs[$scope.userLogsIndex()[i]]);
+        for (var i = $scope.userLogsIndex.length - 1; i >= 0; i--) {
+          values.push($scope.userLogs[$scope.userLogsIndex[i]]);
         }
         return values;
       };
@@ -195,7 +205,7 @@ angular.module('hsArenaAnalysisApp')
       };
 
       $scope.userLogs.$on('loaded', function(d) {
-        console.log($scope.statistic.wins(d));
+        // console.log($scope.statistic.wins(d));
         var winsValue = $scope.statistic.wins(d);
         // drawing wins by nvd3
         nv.addGraph(function() {
@@ -236,7 +246,7 @@ angular.module('hsArenaAnalysisApp')
 
       $scope.averageWins = function() {
         if ($scope.userLogsValue()[0]) {
-          return $scope.totalWins() / $scope.userLogsIndex().length;
+          return $scope.totalWins() / $scope.userLogsIndex.length;
         } else {
           return 'loading';
         }

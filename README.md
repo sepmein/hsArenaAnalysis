@@ -1,17 +1,12 @@
-hsArenaAnalysis
+hsArenaAnalysis ALPHA
 ===============
 
-A hearth stone arena winning rate analysis tool built by Spencer.
+try it: http://lushi.kokiya.com
 
-A certain log may contain such things:
-{
-    user: userid,
-    pro_used: mage,
-    pro_banned: [warrior, hunter],
-    winning_num: 8,
-    losing_num: 3,
-    best_cards: [],
-    worst_cards: [],
-    best_cards_op: [],
-    pro_hated_most: mage
-}
+炉石传说竞技场胜率统计
+作者：Spencer
+
+功能：
+1. 输入数据得到个人统计
+2. 全局统计
+3. 卡牌数据库 with lighting fast search

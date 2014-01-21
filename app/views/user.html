@@ -10,7 +10,7 @@
         <!-- adding log view -->
         <div ng-show="showAdding" class="col-md-12">
             <section class="heroUsed row">
-                <h4>1. 你选择的职业：{{heroUsed | hero}} <i class="fa fa-repeat" ng-click="redoHeroUsed()"></i>
+                <h4>1. 你选择的职业：{{heroUsed | klass}} <i class="fa fa-repeat" ng-click="redoHeroUsed()"></i>
                 </h4>
                 <div>
                     <div ng-repeat="hero in heros" class="col-md-4 hero {{'hero_' + hero}}" ng-click="selectHeroUsed($index)"></div>
@@ -18,7 +18,7 @@
             </section>
             <section class="heroBanned row">
                 <h4>2. 你ban掉的职业：
-                    <span ng-show="heroBanned.length">{{(heroBanned[0] | hero) + ',' + (heroBanned[1] | hero)}}</span><i class="fa fa-repeat" ng-click="redoHeroBanned()"></i>
+                    <span ng-show="heroBanned.length">{{(heroBanned[0] | klass) + ',' + (heroBanned[1] | klass)}}</span><i class="fa fa-repeat" ng-click="redoHeroBanned()"></i>
                 </h4>
                 <div>
                     <div ng-repeat="hero in heros" class="col-md-4 hero {{'hero_' + hero}}" ng-click="selectHeroBanned($index)"></div>
@@ -35,27 +35,28 @@
                     <input type="number" ng-model="loses" max={{losesMax}} min=0 step=1 ng-disabled="disableLoses">
                 </div>
             </section>
+            <!-- FIXME:因为async的特质ng-src会报错 -->
             <section class="optional row">
                 <h4>4. 选填</h4>
                 <div class="col-md-4">
                     <h6>本轮最佳手牌</h6>
                     <input type="text" placeholder="搜索" ng-change="getBestCard()" ng-model="bestCardSearch">
                     <div class="bestCard" ng-show="isShownBestCard">
-                        <img ng-src="{{bestCardModel.imageUrl}}" alt="{{bestCardModel.name}}">
+                        <img ng-src="{{cards.image.baseUrl+ bestCardModel.id + '.png'}}" alt="{{bestCardModel.name}}">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <h6>本轮最差手牌</h6>
                     <input type="text" placeholder="搜索" ng-change="getWorstCard()" ng-model="worstCardSearch">
                     <div class="worstCard" ng-show="isShownWorstCard">
-                        <img ng-src="{{worstCardModel.imageUrl}}" alt="{{worstCardModel.name}}">
+                        <img ng-src="{{cards.image.baseUrl+ worstCardModel.id + '.png'}}" alt="{{worstCardModel.name}}">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <h6>本轮对手最佳手牌</h6>
                     <input type="text" placeholder="搜索" ng-change="getBestCardop()" ng-model="bestCardopSearch">
                     <div class="bestCardop" ng-show="isShownBestCardop">
-                        <img ng-src="{{bestCardopModel.imageUrl}}" alt="{{bestCardopModel.name}}">
+                        <img ng-src="{{cards.image.baseUrl+ bestCardopModel.id + '.png'}}" alt="{{bestCardopModel.name}}">
                     </div>
                 </div>
             </section>
